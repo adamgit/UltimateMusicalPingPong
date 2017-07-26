@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import firebase from 'firebase'
-import { connect } from 'react-firebase'
 
 class PrepareGame extends Component {
   constructor(props) {
@@ -32,18 +31,18 @@ class PrepareGame extends Component {
 
     return ( 
       <div>
-        <select>
+        <select className="PrepareGame-select">
         {
-          allPlayers.map((player) => {
-            return <option value={ player }>{ player }</option>
+          allPlayers.map((player, index) => {
+            return <option key={`player1-${index}`} value={ player }>{ player }</option>
           })
         }
         </select>
 
-        <select>
+        <select className="PrepareGame-select">
         {
-          allPlayers.reverse().map((player) => {
-            return <option value={ player }>{ player }</option>
+          allPlayers.reverse().map((player, index) => {
+            return <option key={`player1-${index}`} value={ player }>{ player }</option>
           })
         }
         </select>

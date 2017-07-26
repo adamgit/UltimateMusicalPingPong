@@ -10,7 +10,7 @@ class CreatePlayer extends Component {
   }
 
   render() {
-    const { players, setPlayer } = this.props
+    const { setPlayer } = this.props
     const { name } = this.state
 
     return (
@@ -22,6 +22,5 @@ class CreatePlayer extends Component {
 }
 
 export default connect((props, ref) => ({
-  players: 'players',
   setPlayer: player => ref('players').push(player)
 }))(CreatePlayer)
