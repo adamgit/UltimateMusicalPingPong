@@ -42,7 +42,7 @@ class PrepareGame extends Component {
 
         <select>
         {
-          allPlayers.map((player) => {
+          allPlayers.reverse().map((player) => {
             return <option value={ player }>{ player }</option>
           })
         }

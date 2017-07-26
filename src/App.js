@@ -16,13 +16,14 @@ class App extends Component {
   render() {
     return (
       <Provider firebaseApp={ firebaseApp }>
-        <Main />        
         <div className="App">
           <div className="App-header">
             <CreatePlayer/>
             <PrepareGame/>
 
           </div>
+          
+          <Main />        
         </div>
       </Provider>
     );
